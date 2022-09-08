@@ -13,13 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('currency', function (Blueprint $table) {
+        Schema::create('connexion_admins', function (Blueprint $table) {
             $table->id();
-            $table->string('Name');
-            $table->string('FromCurrency');
-            $table->string('ToCurrency');
-            $table->string('Etat');
-            $table->string('Rate');
             $table->timestamps();
         });
     }
@@ -31,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('currency');
+        Schema::dropIfExists('connexion_admins');
     }
 };

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateCurrenciesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('currencies', function (Blueprint $table) {
-            $table->id();
+       Schema::create('currencies', function (Blueprint $table) {
+            $table->string('id');
+            $table->string('Name');
+            $table->float('Rate',20,6);
+            $table->integer('CountUsed');
             $table->timestamps();
+
         });
     }
 
