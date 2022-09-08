@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class admin_users extends Model
 {
     use HasFactory;
+    //inserer les valeurs des colonnes et les rendre assignable
+    protected $guarded = [];
 }

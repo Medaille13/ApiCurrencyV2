@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('FromCurrency');
             $table->string('ToCurrency');
             $table->string('Etat');
+            $table->string('Rate');
             $table->timestamps();
         });
     }
