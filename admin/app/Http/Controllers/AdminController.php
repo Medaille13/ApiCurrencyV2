@@ -94,10 +94,18 @@ class AdminController extends Controller
 
     //pour verifier les paires utilisées
     //recuperation du click
-    /*public function paireutilisee(){
-        $onclick= ::all();
-        return response()->json($data);
+    public function clicrecuperation($paire){
+        $paire = currency::where('Name',$paire)->first();
+        $paire->update([
+            'CountUsed'=>(int)$paire->CountUsed+1
+        ]);
+    
+        return 'ok';
         //affichage des paires
 
-    }*/
+    }
+
+    public function api(){
+        return view 
+    }
 }    

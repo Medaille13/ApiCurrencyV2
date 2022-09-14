@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion Admin</title>
 </head>
-<body>
+<body style="background-color:burlywood">
     <h2 align="center">Formulaire de connexion pour administrateur</h2><br>
     <form action={{ route("adminlogin") }} method="POST">
         {{ csrf_field() }}

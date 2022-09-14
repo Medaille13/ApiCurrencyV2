@@ -70,7 +70,8 @@ Route::post('/admin/modification',"App\Http\Controllers\AdminController@modifica
 
 
 
-// Récupération bdr
+// Récupération bdr pour l'api
 Route::get('/recuperationpaire', "App\Http\Controllers\AdminController@apirecuperation");
 
-
+// Récupération clic utilisateur
+Route::any('/recuperationclic/{paire}',"App\Http\Controllers\AdminController@clicrecuperation");

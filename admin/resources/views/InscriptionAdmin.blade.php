@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription Admin</title>
 </head>
-<body>
+<body style="background-color:burlywood">
     <h2 align="center">Formulaire d'inscription pour administrateur</h2><br>
     <form action={{ route("admininscription") }} method="POST">
         {{ csrf_field() }}
